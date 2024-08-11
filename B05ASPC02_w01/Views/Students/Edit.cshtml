@@ -1,0 +1,26 @@
+﻿
+@model B05ASPC02_w01.Models.Student
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Edit </h2>
+@using (Html.BeginForm())
+{
+    <div class="input-group">
+        @Html.HiddenFor(m=>m.Id)
+        <label class="col-md-3">Name</label>
+        @Html.EditorFor(m => m.Name, new { @class = "form-control col-md-9" })
+    </div>
+    <div class="input-group">
+        <label>Name</label>
+        @Html.EditorFor(m => m.Description)
+    </div>
+    <div>
+        <input type="submit" class="btn btn-secondary mt-5 btn-lg" value="Update" />
+        @Html.ActionLink("Back to list", "Index", "Students", new { @class = "btn btn-primary  mt-5 btn-lg" })
+    </div>
+
+}
+
